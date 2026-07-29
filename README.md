@@ -1,16 +1,12 @@
 <div align="center">
 
-# M. Zorigt
+![M. Zorigt — production systems, end to end, solo](assets/header.svg)
 
-**I design, build, deploy and operate production systems — end to end, solo.**
-
-<sub>Ulaanbaatar, Mongolia · UTC+8</sub>
-
-<br>
-
-<a href="https://crm.tee.education"><img alt="TEMS — live in production" src="https://img.shields.io/badge/TEMS-live_in_production-009E73?style=flat-square&labelColor=2f363d"></a>&nbsp;<a href="https://github.com/mz310/anytime"><img alt="ANYTIME — live" src="https://img.shields.io/badge/ANYTIME-live-009E73?style=flat-square&labelColor=2f363d"></a>&nbsp;<a href="https://www.linkedin.com/in/YOUR-HANDLE"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-2f363d?style=flat-square&logo=linkedin&logoColor=white"></a>&nbsp;<a href="mailto:mzorigt6@gmail.com"><img alt="Email" src="https://img.shields.io/badge/email-2f363d?style=flat-square"></a>
+<a href="https://crm.tee.education"><img alt="TEMS — live" src="https://img.shields.io/badge/LIVE-crm.tee.education-ffffff?style=flat-square&labelColor=000000"></a>&nbsp;<a href="https://github.com/mz310/anytime"><img alt="ANYTIME — live" src="https://img.shields.io/badge/LIVE-mz310%2Fanytime-ffffff?style=flat-square&labelColor=000000"></a>&nbsp;<a href="https://www.linkedin.com/in/YOUR-HANDLE"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-ffffff?style=flat-square&logo=linkedin&logoColor=000000"></a>&nbsp;<a href="mailto:YOU@EXAMPLE.COM"><img alt="Email" src="https://img.shields.io/badge/EMAIL-ffffff?style=flat-square"></a>
 
 </div>
+
+![01 — whoami](assets/s01.svg)
 
 Two systems below are in production today: a CRM running the full enrollment pipeline of
 an eight-branch education group, and a geofence-verified membership platform for a 24/7
@@ -18,14 +14,12 @@ gym. Both built alone, end to end — schema, API, background jobs, frontend, de
 pipeline. Currently operating and extending both; open to full-stack roles and contract
 work.
 
----
+![02 — TEMS, production CRM](assets/s02.svg)
 
-## TEMS — enrollment CRM for TEE, an eight-branch education group
-
-<a href="https://crm.tee.education"><img alt="Live at crm.tee.education" src="https://img.shields.io/badge/live-crm.tee.education-009E73?style=flat-square&labelColor=2f363d"></a> <img alt="Private repository" src="https://img.shields.io/badge/repo-private-59636e?style=flat-square&labelColor=2f363d"> <img alt="Built solo" src="https://img.shields.io/badge/built-solo-59636e?style=flat-square&labelColor=2f363d">
+<a href="https://crm.tee.education"><img alt="Live at crm.tee.education" src="https://img.shields.io/badge/LIVE-crm.tee.education-ffffff?style=flat-square&labelColor=000000"></a> <img alt="Private repository" src="https://img.shields.io/badge/REPO-PRIVATE-ffffff?style=flat-square&labelColor=000000"> <img alt="Built solo" src="https://img.shields.io/badge/BUILT-SOLO-ffffff?style=flat-square&labelColor=000000">
 
 One system running the pipeline from ad click to signed contract — in daily use by
-sales, HR, finance and branch teams.
+sales, HR, finance and branch teams at TEE, a private education group.
 
 Leads used to arrive through five unconnected channels: Meta Lead Ads, Google Forms,
 walk-ins, events, and the Google Sheets the sales team already lived in. Nobody could
@@ -47,11 +41,12 @@ spreadsheets, a BullMQ worker makes the sheet a first-class synced surface: idem
 import (content-hashed keys, so re-runs are no-ops) plus writeback of CRM state into
 the sheet. The adoption problem was solved by architecture.
 
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-2f363d?style=flat-square&logo=typescript&logoColor=white"> <img alt="Express" src="https://img.shields.io/badge/Express-2f363d?style=flat-square&logo=express&logoColor=white"> <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-2f363d?style=flat-square&logo=postgresql&logoColor=white"> <img alt="Redis" src="https://img.shields.io/badge/Redis-2f363d?style=flat-square&logo=redis&logoColor=white"> <img alt="BullMQ" src="https://img.shields.io/badge/BullMQ-2f363d?style=flat-square"> <img alt="React 19" src="https://img.shields.io/badge/React_19-2f363d?style=flat-square&logo=react&logoColor=white"> <img alt="Tailwind 4" src="https://img.shields.io/badge/Tailwind_4-2f363d?style=flat-square&logo=tailwindcss&logoColor=white"> <img alt="TanStack Query" src="https://img.shields.io/badge/TanStack_Query-2f363d?style=flat-square&logo=reactquery&logoColor=white"> <img alt="Zod" src="https://img.shields.io/badge/Zod-2f363d?style=flat-square&logo=zod&logoColor=white"> <img alt="Vitest" src="https://img.shields.io/badge/Vitest-2f363d?style=flat-square&logo=vitest&logoColor=white"> <img alt="Gemini" src="https://img.shields.io/badge/Gemini-2f363d?style=flat-square&logo=googlegemini&logoColor=white">
+![71 SQL migrations · 8 background workers · 28 services · 67 test files · 44 ops scripts · 8 RBAC roles](assets/tems-telemetry.svg)
 
-<sub>71 versioned SQL migrations, applied automatically on every deploy · 8 background
-workers · 28 backend services · 67 test files · 44 operational scripts, all
-preview-by-default — nothing writes to production without an explicit `--apply` flag</sub>
+<sub>Migrations apply automatically on every deploy. All 44 operational scripts are
+preview-by-default — nothing writes to production without an explicit `--apply` flag.</sub>
+
+<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-ffffff?style=flat-square&logo=typescript&logoColor=000000"> <img alt="Express" src="https://img.shields.io/badge/Express-ffffff?style=flat-square&logo=express&logoColor=000000"> <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-ffffff?style=flat-square&logo=postgresql&logoColor=000000"> <img alt="Redis" src="https://img.shields.io/badge/Redis-ffffff?style=flat-square&logo=redis&logoColor=000000"> <img alt="BullMQ" src="https://img.shields.io/badge/BullMQ-ffffff?style=flat-square"> <img alt="React 19" src="https://img.shields.io/badge/React_19-ffffff?style=flat-square&logo=react&logoColor=000000"> <img alt="Tailwind 4" src="https://img.shields.io/badge/Tailwind_4-ffffff?style=flat-square&logo=tailwindcss&logoColor=000000"> <img alt="TanStack Query" src="https://img.shields.io/badge/TanStack_Query-ffffff?style=flat-square&logo=reactquery&logoColor=000000"> <img alt="Zod" src="https://img.shields.io/badge/Zod-ffffff?style=flat-square&logo=zod&logoColor=000000"> <img alt="Vitest" src="https://img.shields.io/badge/Vitest-ffffff?style=flat-square&logo=vitest&logoColor=000000"> <img alt="Gemini" src="https://img.shields.io/badge/Gemini-ffffff?style=flat-square&logo=googlegemini&logoColor=000000">
 
 > [!NOTE]
 > The repository is private — it holds a client's production data model. I'm happy to
@@ -88,11 +83,9 @@ flowchart LR
 
 </details>
 
----
+![03 — ANYTIME, geofenced fitness](assets/s03.svg)
 
-## ANYTIME — geofenced membership for a 24/7 gym
-
-<a href="https://api.zorigt.live"><img alt="API live" src="https://img.shields.io/badge/API-api.zorigt.live-009E73?style=flat-square&labelColor=2f363d"></a> <a href="https://dashboard.zorigt.live"><img alt="Dashboard live" src="https://img.shields.io/badge/dashboard-dashboard.zorigt.live-009E73?style=flat-square&labelColor=2f363d"></a> <a href="https://github.com/mz310/anytime"><img alt="Repository" src="https://img.shields.io/badge/repo-mz310%2Fanytime-59636e?style=flat-square&labelColor=2f363d"></a>
+<a href="https://api.zorigt.live"><img alt="API live" src="https://img.shields.io/badge/API-api.zorigt.live-ffffff?style=flat-square&labelColor=000000"></a> <a href="https://dashboard.zorigt.live"><img alt="Dashboard live" src="https://img.shields.io/badge/DASHBOARD-dashboard.zorigt.live-ffffff?style=flat-square&labelColor=000000"></a> <a href="https://github.com/mz310/anytime"><img alt="Repository" src="https://img.shields.io/badge/REPO-mz310%2Fanytime-ffffff?style=flat-square&labelColor=000000"></a>
 
 Mobile app, REST API and manager dashboard for ANYTIME 24/7 fitness in Ulaanbaatar —
 deployed and running on ~$5/month of infrastructure.
@@ -116,10 +109,11 @@ Native app, a Vite/React manager dashboard, and CI — JWT auth (bcrypt cost 12,
 rate-limited to 5 requests/min on auth routes), with the Prisma schema as the single
 source of truth across all three.
 
-<img alt="NestJS" src="https://img.shields.io/badge/NestJS-2f363d?style=flat-square&logo=nestjs&logoColor=white"> <img alt="Prisma" src="https://img.shields.io/badge/Prisma-2f363d?style=flat-square&logo=prisma&logoColor=white"> <img alt="PostgreSQL 17" src="https://img.shields.io/badge/PostgreSQL_17-2f363d?style=flat-square&logo=postgresql&logoColor=white"> <img alt="Expo" src="https://img.shields.io/badge/Expo-2f363d?style=flat-square&logo=expo&logoColor=white"> <img alt="React Native" src="https://img.shields.io/badge/React_Native-2f363d?style=flat-square&logo=react&logoColor=white"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-2f363d?style=flat-square&logo=typescript&logoColor=white"> <img alt="Docker" src="https://img.shields.io/badge/Docker-2f363d?style=flat-square&logo=docker&logoColor=white"> <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub_Actions-2f363d?style=flat-square&logo=githubactions&logoColor=white">
+![15 Prisma models · 17 migrations · 13 backend modules · 17 test suites · about five dollars per month of infrastructure](assets/anytime-telemetry.svg)
 
-<sub>15 Prisma models · 17 migrations · 13 backend modules · 17 backend test suites ·
-CI on backend and mobile · Android APK via EAS Build · total infrastructure ≈ $5/month</sub>
+<sub>CI on backend and mobile · Android APK distributed through EAS Build.</sub>
+
+<img alt="NestJS" src="https://img.shields.io/badge/NestJS-ffffff?style=flat-square&logo=nestjs&logoColor=000000"> <img alt="Prisma" src="https://img.shields.io/badge/Prisma-ffffff?style=flat-square&logo=prisma&logoColor=000000"> <img alt="PostgreSQL 17" src="https://img.shields.io/badge/PostgreSQL_17-ffffff?style=flat-square&logo=postgresql&logoColor=000000"> <img alt="Expo" src="https://img.shields.io/badge/Expo-ffffff?style=flat-square&logo=expo&logoColor=000000"> <img alt="React Native" src="https://img.shields.io/badge/React_Native-ffffff?style=flat-square&logo=react&logoColor=000000"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-ffffff?style=flat-square&logo=typescript&logoColor=000000"> <img alt="Docker" src="https://img.shields.io/badge/Docker-ffffff?style=flat-square&logo=docker&logoColor=000000"> <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub_Actions-ffffff?style=flat-square&logo=githubactions&logoColor=000000">
 
 <details>
 <summary>Feature surface, and what a check-in actually verifies</summary>
@@ -145,18 +139,19 @@ sequenceDiagram
 
 </details>
 
----
+![04 — stack](assets/s04.svg)
 
-## Stack
+![Backend: TypeScript, Node.js, NestJS, Express, Prisma, Zod, BullMQ, Vitest. Web and mobile: React 19, React Native, Expo, Vite, TanStack Query, Tailwind 4, zustand, Recharts. Data: PostgreSQL, Neon, Redis. Ops: Docker, GitHub Actions, EAS Build, PM2, nginx, DigitalOcean, Vercel, Cloudflare.](assets/stack.svg)
 
-| | |
-|---|---|
-| **Backend** | <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-2f363d?style=flat-square&logo=typescript&logoColor=white"> <img alt="Node.js" src="https://img.shields.io/badge/Node.js-2f363d?style=flat-square&logo=nodedotjs&logoColor=white"> <img alt="NestJS" src="https://img.shields.io/badge/NestJS-2f363d?style=flat-square&logo=nestjs&logoColor=white"> <img alt="Express" src="https://img.shields.io/badge/Express-2f363d?style=flat-square&logo=express&logoColor=white"> <img alt="Prisma" src="https://img.shields.io/badge/Prisma-2f363d?style=flat-square&logo=prisma&logoColor=white"> <img alt="Zod" src="https://img.shields.io/badge/Zod-2f363d?style=flat-square&logo=zod&logoColor=white"> <img alt="BullMQ" src="https://img.shields.io/badge/BullMQ-2f363d?style=flat-square"> <img alt="Vitest" src="https://img.shields.io/badge/Vitest-2f363d?style=flat-square&logo=vitest&logoColor=white"> |
-| **Web & mobile** | <img alt="React" src="https://img.shields.io/badge/React-2f363d?style=flat-square&logo=react&logoColor=white"> <img alt="React Native" src="https://img.shields.io/badge/React_Native-2f363d?style=flat-square&logo=react&logoColor=white"> <img alt="Expo" src="https://img.shields.io/badge/Expo-2f363d?style=flat-square&logo=expo&logoColor=white"> <img alt="Vite" src="https://img.shields.io/badge/Vite-2f363d?style=flat-square&logo=vite&logoColor=white"> <img alt="TanStack Query" src="https://img.shields.io/badge/TanStack_Query-2f363d?style=flat-square&logo=reactquery&logoColor=white"> <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-2f363d?style=flat-square&logo=tailwindcss&logoColor=white"> <img alt="zustand" src="https://img.shields.io/badge/zustand-2f363d?style=flat-square"> <img alt="Recharts" src="https://img.shields.io/badge/Recharts-2f363d?style=flat-square"> |
-| **Data** | <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-2f363d?style=flat-square&logo=postgresql&logoColor=white"> <img alt="Neon" src="https://img.shields.io/badge/Neon-2f363d?style=flat-square&logo=neon&logoColor=white"> <img alt="Redis" src="https://img.shields.io/badge/Redis-2f363d?style=flat-square&logo=redis&logoColor=white"> |
-| **Ops & delivery** | <img alt="Docker" src="https://img.shields.io/badge/Docker-2f363d?style=flat-square&logo=docker&logoColor=white"> <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub_Actions-2f363d?style=flat-square&logo=githubactions&logoColor=white"> <img alt="EAS Build" src="https://img.shields.io/badge/EAS_Build-2f363d?style=flat-square&logo=expo&logoColor=white"> <img alt="PM2" src="https://img.shields.io/badge/PM2-2f363d?style=flat-square&logo=pm2&logoColor=white"> <img alt="nginx" src="https://img.shields.io/badge/nginx-2f363d?style=flat-square&logo=nginx&logoColor=white"> <img alt="DigitalOcean" src="https://img.shields.io/badge/DigitalOcean-2f363d?style=flat-square&logo=digitalocean&logoColor=white"> <img alt="Vercel" src="https://img.shields.io/badge/Vercel-2f363d?style=flat-square&logo=vercel&logoColor=white"> <img alt="Cloudflare" src="https://img.shields.io/badge/Cloudflare-2f363d?style=flat-square&logo=cloudflare&logoColor=white"> |
+![05 — contact](assets/s05.svg)
 
----
+<div align="center">
+
+![Open to full-stack roles and contract work](assets/footer.svg)
+
+<a href="https://www.linkedin.com/in/YOUR-HANDLE"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-ffffff?style=flat-square&logo=linkedin&logoColor=000000"></a>&nbsp;<a href="mailto:YOU@EXAMPLE.COM"><img alt="Email" src="https://img.shields.io/badge/EMAIL-ffffff?style=flat-square"></a>&nbsp;<a href="https://github.com/mz310"><img alt="GitHub" src="https://img.shields.io/badge/GITHUB-mz310-ffffff?style=flat-square&labelColor=000000"></a>
+
+</div>
 
 <details>
 <summary>🇲🇳 Монголоор</summary>
@@ -206,11 +201,3 @@ Sheets гэсэн хоорондоо холбоогүй таван сувгаа�
    дээр минутад 5 хүсэлт), Prisma схем нь гурвуулангийн цорын ганц үнэний эх сурвалж.
 
 </details>
-
----
-
-<div align="center">
-
-<sub>Open to full-stack roles and contract work · <a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a> · <a href="mailto:YOU@EXAMPLE.COM">email</a> · Ulaanbaatar, UTC+8</sub>
-
-</div>
