@@ -40,7 +40,7 @@ const mz310 = {
   building:   ["nuuts-nfc-web", "anytime — 24/7 fitness", "moodle"],
   learning:   ["System Design", "Next.js App Router", "Clean Architecture"],
   offScreen: {
-    anime:      ["Vinland Saga", "Steins;Gate", "Monster"],
+    anime:      ["Attack on titan", "Naruto Shippuden", "Demon Slayer", "Tokyo revengers"],
     movies:     ["Interstellar", "Whiplash", "Blade Runner 2049"],
     basketball: "🏀 hoops > everything",
     music:      ["Bach", "Chopin", "Rachmaninoff"],
@@ -179,21 +179,13 @@ const mz310 = {
 
 <div align="center">
 
-<a href="mailto:YOUR_EMAIL@example.com">
+<a href="mailto:mzorigt6@gmail.com">
   <img src="https://img.shields.io/badge/Email-8E2DE2?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
-<a href="https://linkedin.com/in/YOUR_HANDLE">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-<a href="https://t.me/YOUR_HANDLE">
-  <img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" />
-</a>
-<a href="https://instagram.com/YOUR_HANDLE">
+<a href="https://instagram.com/mzorigt6">
   <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" />
 </a>
-
 </div>
-
 <br/>
 
 <div align="center">
