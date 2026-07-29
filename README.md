@@ -1,284 +1,216 @@
-<!-- ═══════════════════════════════════════════════════════════
-     М.Зоригт (mz310) · GitHub Profile README
-     ═══════════════════════════════════════════════════════════ -->
-
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8E2DE2,50:4A00E0,100:00C9FF&height=220&section=header&text=M.Zorigt&fontSize=75&fontColor=ffffff&fontAlignY=32&desc=Software%20Engineer%20%C2%B7%20IT%20Teacher%20%C2%B7%20Ulaanbaatar&descAlignY=52&descSize=18&animation=fadeIn" width="100%" />
+# M. Zorigt
 
-<!-- ── Typing animation ── -->
-<a href="https://github.com/mz310">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=25&pause=1000&color=8E2DE2&center=true&vCenter=true&width=720&height=60&lines=Сайн+байна+уу!+%F0%9F%91%8B+I'm+Zorigt;Software+Engineer+from+Mongolia+%F0%9F%87%B2%F0%9F%87%B3;IT+Teacher+%40+TEE+Education+%E2%80%94+3rd+year+%F0%9F%A7%91%E2%80%8D%F0%9F%8F%AB;Teaching+Python%2C+C%2C+Scratch+%26+UI%2FUX+to+kids;Anime+%F0%9F%8E%8C+%7C+Cinema+%F0%9F%8E%AC+%7C+Hoops+%F0%9F%8F%80+%7C+Bach+%F0%9F%8E%BB" alt="Typing SVG" />
-</a>
+**I design, build, deploy and operate production systems — end to end, solo.**
 
-<br/>
+<sub>Ulaanbaatar, Mongolia · UTC+8</sub>
 
-<!-- ── Badges ── -->
-<img src="https://komarev.com/ghpvc/?username=mz310&label=Profile%20Views&color=8E2DE2&style=for-the-badge" alt="views" />
-<a href="https://github.com/mz310?tab=followers">
-  <img src="https://img.shields.io/github/followers/mz310?label=Followers&style=for-the-badge&color=4A00E0&labelColor=1a1b27" alt="followers" />
-</a>
-<a href="https://tee.education/mn/teachers/cmo0k4aro001257pmypb66fi7">
-  <img src="https://img.shields.io/badge/🧑‍🏫_Teacher_@_TEE_Education-00C9FF?style=for-the-badge&labelColor=1a1b27" alt="tee" />
-</a>
+<br>
+
+<a href="https://crm.tee.education"><img alt="TEMS — live in production" src="https://img.shields.io/badge/TEMS-live_in_production-009E73?style=flat-square&labelColor=2f363d"></a>&nbsp;<a href="https://github.com/mz310/anytime"><img alt="ANYTIME — live" src="https://img.shields.io/badge/ANYTIME-live-009E73?style=flat-square&labelColor=2f363d"></a>&nbsp;<a href="https://www.linkedin.com/in/YOUR-HANDLE"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-2f363d?style=flat-square&logo=linkedin&logoColor=white"></a>&nbsp;<a href="mailto:mzorigt6@gmail.com"><img alt="Email" src="https://img.shields.io/badge/email-2f363d?style=flat-square"></a>
 
 </div>
 
-<br/>
+Two systems below are in production today: a CRM running the full enrollment pipeline of
+an eight-branch education group, and a geofence-verified membership platform for a 24/7
+gym. Both built alone, end to end — schema, API, background jobs, frontend, deploy
+pipeline. Currently operating and extending both; open to full-stack roles and contract
+work.
 
-<!-- ═══════════════════════════════════════════════════════════ -->
+---
 
-<img align="right" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="230" alt="coding" />
+## TEMS — enrollment CRM for TEE, an eight-branch education group
 
-## 🧭 &nbsp;`whoami`
+<a href="https://crm.tee.education"><img alt="Live at crm.tee.education" src="https://img.shields.io/badge/live-crm.tee.education-009E73?style=flat-square&labelColor=2f363d"></a> <img alt="Private repository" src="https://img.shields.io/badge/repo-private-59636e?style=flat-square&labelColor=2f363d"> <img alt="Built solo" src="https://img.shields.io/badge/built-solo-59636e?style=flat-square&labelColor=2f363d">
 
-```ts
-const zorigt = {
-  name:      "М.Зоригт",
-  location:  "Улаанбаатар, Монгол 🇲🇳",
-  education: "ШУТИС — Программ хангамжийн инженерчлэл",
-  roles: [
-    "Software Engineer",
-    "IT Teacher @ TEE Education (3 жил)",
-  ],
-  teaching:  ["Python", "C", "Scratch", "UI/UX"],
-  building:  ["nuuts-nfc-web", "anytime — 24/7 fitness", "moodle"],
-  exploring: ["Computer Vision", "Machine Learning", "System Design"],
+One system running the pipeline from ad click to signed contract — in daily use by
+sales, HR, finance and branch teams.
 
-  offScreen: {
-    anime:      "🎌 сэтгэл зүйн болон seinen төрөл",
-    movies:     "🎬 sci-fi · Nolan · Villeneuve",
-    basketball: "🏀 талбай дээр ч, дэлгэц дээр ч",
-    music:      "🎻 Bach debug хийхэд, Rachmaninoff refactor хийхэд",
-  },
+Leads used to arrive through five unconnected channels: Meta Lead Ads, Google Forms,
+walk-ins, events, and the Google Sheets the sales team already lived in. Nobody could
+answer *"how many of last month's ad leads actually enrolled, and at which branch?"* —
+duplicate parents were counted twice, and contracts and payments were tracked by hand.
 
-  motto: "Ойлгомжтой заа. Цэвэрхэн бич. Дуусгаад тавь.",
-};
+**An LLM only where it earns its cost.** Mongolian names arrive in both Cyrillic and
+Latin transliteration. A deterministic matcher — reduced transliteration + token sort +
+trigram similarity — resolves the clear cases for free; only the ambiguous middle band
+goes to Gemini, and its verdict is accepted only above a confidence threshold.
+Otherwise a human decides. Siblings are structurally prevented from ever being merged.
+
+**A merge engine that fails closed.** It refuses to run if a new table references leads
+without being registered in its known-FK set — so a future migration cannot silently
+orphan data. A loud failure beats silent data loss.
+
+**Meet users where they already are.** Instead of forcing the sales team off
+spreadsheets, a BullMQ worker makes the sheet a first-class synced surface: idempotent
+import (content-hashed keys, so re-runs are no-ops) plus writeback of CRM state into
+the sheet. The adoption problem was solved by architecture.
+
+<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-2f363d?style=flat-square&logo=typescript&logoColor=white"> <img alt="Express" src="https://img.shields.io/badge/Express-2f363d?style=flat-square&logo=express&logoColor=white"> <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-2f363d?style=flat-square&logo=postgresql&logoColor=white"> <img alt="Redis" src="https://img.shields.io/badge/Redis-2f363d?style=flat-square&logo=redis&logoColor=white"> <img alt="BullMQ" src="https://img.shields.io/badge/BullMQ-2f363d?style=flat-square"> <img alt="React 19" src="https://img.shields.io/badge/React_19-2f363d?style=flat-square&logo=react&logoColor=white"> <img alt="Tailwind 4" src="https://img.shields.io/badge/Tailwind_4-2f363d?style=flat-square&logo=tailwindcss&logoColor=white"> <img alt="TanStack Query" src="https://img.shields.io/badge/TanStack_Query-2f363d?style=flat-square&logo=reactquery&logoColor=white"> <img alt="Zod" src="https://img.shields.io/badge/Zod-2f363d?style=flat-square&logo=zod&logoColor=white"> <img alt="Vitest" src="https://img.shields.io/badge/Vitest-2f363d?style=flat-square&logo=vitest&logoColor=white"> <img alt="Gemini" src="https://img.shields.io/badge/Gemini-2f363d?style=flat-square&logo=googlegemini&logoColor=white">
+
+<sub>71 versioned SQL migrations, applied automatically on every deploy · 8 background
+workers · 28 backend services · 67 test files · 44 operational scripts, all
+preview-by-default — nothing writes to production without an explicit `--apply` flag</sub>
+
+> [!NOTE]
+> The repository is private — it holds a client's production data model. I'm happy to
+> walk through the architecture and code live.
+
+<details>
+<summary>More decisions, and how a lead becomes exactly one clean record</summary>
+
+- **8-state lead lifecycle** enforced by a server-side transition state machine —
+  `ENROLLED` is reachable *only* through verified contract ingestion; a status can't be
+  faked from the UI.
+- **RBAC across 8 roles** on a page × action matrix. Branch-scoped roles are
+  hard-filtered at the SQL layer on every read and ownership-checked on every write —
+  not merely hidden in the UI.
+- **Finance:** grade-derived tuition, discount snapshots, installment schedules, and an
+  audit ledger.
+- Also in the stack: Neon Postgres · Vite · React Router 7 · Recharts · PM2 · nginx ·
+  Meta Lead Ads webhooks · Google Sheets/Forms API · Moodle.
+
+```mermaid
+flowchart LR
+    FB[Meta Lead Ads] --> IN[Ingest]
+    GF[Google Forms] --> IN
+    GS[Google Sheets] --> IN
+    WK[Walk-ins / events] --> IN
+    IN --> DM{Deterministic matcher}
+    DM -- clear --> CRM[(CRM)]
+    DM -- ambiguous band --> LLM[Gemini]
+    LLM -- above threshold --> CRM
+    LLM -- below threshold --> HR[Human review]
+    HR --> CRM
+    CRM -- writeback --> GS
 ```
 
-<br clear="right"/>
+</details>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
+---
 
-## 🧑‍🏫 &nbsp;Teaching
+## ANYTIME — geofenced membership for a 24/7 gym
 
-<div align="center">
+<a href="https://api.zorigt.live"><img alt="API live" src="https://img.shields.io/badge/API-api.zorigt.live-009E73?style=flat-square&labelColor=2f363d"></a> <a href="https://dashboard.zorigt.live"><img alt="Dashboard live" src="https://img.shields.io/badge/dashboard-dashboard.zorigt.live-009E73?style=flat-square&labelColor=2f363d"></a> <a href="https://github.com/mz310/anytime"><img alt="Repository" src="https://img.shields.io/badge/repo-mz310%2Fanytime-59636e?style=flat-square&labelColor=2f363d"></a>
 
-<table>
-<tr>
-<td width="60%" valign="top">
+Mobile app, REST API and manager dashboard for ANYTIME 24/7 fitness in Ulaanbaatar —
+deployed and running on ~$5/month of infrastructure.
 
-**[TEE Education](https://tee.education/mn)** — *The Essential Engineering Education*
-Монголын инженерийн боловсролын сургууль · 3–10 ангийн сурагчид
+A 24/7 gym has no staff at the door for most of the day. Membership check-in has to be
+self-service, trustworthy, and impossible to fake from a couch across town.
 
-Би мэдээллийн технологийн багшаар **3 дахь жилдээ** ажиллаж байна.
-Программчлал болон технологийн суурь ойлголтыг **ойлгомжтой, практикт
-суурилсан** байдлаар заахыг зорьдог. Сурагчид зөвхөн код бичээд зогсохгүй,
-**бодит төсөл** дээр ажиллаж үр дүнгээ гартаа барьдаг.
+**Anti-spoofing as layered defence, not a checkbox.** The client checks `coords.mocked`
+to catch mock-location apps; the server independently re-runs the Haversine distance
+calculation rather than trusting a client-reported "I'm inside". Readings with accuracy
+worse than 100 m are rejected outright, and the geofence tolerance scales with reported
+accuracy (accuracy / 2, capped at 25 m) instead of one fixed radius.
 
-<a href="https://tee.education/mn/teachers/cmo0k4aro001257pmypb66fi7">
-  <img src="https://img.shields.io/badge/Профайл_үзэх-8E2DE2?style=for-the-badge&logoColor=white" />
-</a>
+**Sessions that survive the phone being pocketed.** Background tracking via
+`expo-task-manager` with an Android foreground-service notification keeps a workout
+session accruing while the app is off-screen. GPS acquisition is wrapped in a 10-second
+`Promise.race`, so the UI degrades to an explicit timeout state instead of hanging.
 
-</td>
-<td width="40%" valign="top" align="center">
+**One backend, three very different clients.** A NestJS + Prisma API serves a React
+Native app, a Vite/React manager dashboard, and CI — JWT auth (bcrypt cost 12,
+rate-limited to 5 requests/min on auth routes), with the Prisma schema as the single
+source of truth across all three.
 
-**Заадаг хичээлүүд**
+<img alt="NestJS" src="https://img.shields.io/badge/NestJS-2f363d?style=flat-square&logo=nestjs&logoColor=white"> <img alt="Prisma" src="https://img.shields.io/badge/Prisma-2f363d?style=flat-square&logo=prisma&logoColor=white"> <img alt="PostgreSQL 17" src="https://img.shields.io/badge/PostgreSQL_17-2f363d?style=flat-square&logo=postgresql&logoColor=white"> <img alt="Expo" src="https://img.shields.io/badge/Expo-2f363d?style=flat-square&logo=expo&logoColor=white"> <img alt="React Native" src="https://img.shields.io/badge/React_Native-2f363d?style=flat-square&logo=react&logoColor=white"> <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-2f363d?style=flat-square&logo=typescript&logoColor=white"> <img alt="Docker" src="https://img.shields.io/badge/Docker-2f363d?style=flat-square&logo=docker&logoColor=white"> <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub_Actions-2f363d?style=flat-square&logo=githubactions&logoColor=white">
 
-<img src="https://skillicons.dev/icons?i=python,c&theme=dark" height="45" />
-<br/>
-<img src="https://img.shields.io/badge/Scratch-4D97FF?style=flat-square&logo=scratch&logoColor=white" />
-<img src="https://img.shields.io/badge/UI%2FUX-FF61F6?style=flat-square&logo=figma&logoColor=white" />
+<sub>15 Prisma models · 17 migrations · 13 backend modules · 17 backend test suites ·
+CI on backend and mobile · Android APK via EAS Build · total infrastructure ≈ $5/month</sub>
 
-<br/><br/>
+<details>
+<summary>Feature surface, and what a check-in actually verifies</summary>
 
-`3 жилийн туршлага`
-<br/>
-`3–10 анги`
+Email-verified JWT auth · geofenced check-in in under 2 seconds · session and streak
+points · workout plans · exercise and equipment library · trainer↔member messaging ·
+leaderboard · push notifications · manager dashboard.
 
-</td>
-</tr>
-</table>
+Built as a B.Sc. thesis project (MUST, 2026) — but deployed against a real gym, not a
+demo.
 
-</div>
+```mermaid
+sequenceDiagram
+    participant P as Phone
+    participant S as Server
+    P->>P: reject if coords.mocked
+    P->>S: check-in (lat, lng, accuracy)
+    S->>S: reject if accuracy > 100 m
+    S->>S: re-run Haversine independently
+    S->>S: tolerance = accuracy / 2, capped at 25 m
+    S-->>P: session started / rejected
+```
 
-<br/>
+</details>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
+---
 
-## 🛠️ &nbsp;Tech Stack
+## Stack
 
-<div align="center">
+| | |
+|---|---|
+| **Backend** | <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-2f363d?style=flat-square&logo=typescript&logoColor=white"> <img alt="Node.js" src="https://img.shields.io/badge/Node.js-2f363d?style=flat-square&logo=nodedotjs&logoColor=white"> <img alt="NestJS" src="https://img.shields.io/badge/NestJS-2f363d?style=flat-square&logo=nestjs&logoColor=white"> <img alt="Express" src="https://img.shields.io/badge/Express-2f363d?style=flat-square&logo=express&logoColor=white"> <img alt="Prisma" src="https://img.shields.io/badge/Prisma-2f363d?style=flat-square&logo=prisma&logoColor=white"> <img alt="Zod" src="https://img.shields.io/badge/Zod-2f363d?style=flat-square&logo=zod&logoColor=white"> <img alt="BullMQ" src="https://img.shields.io/badge/BullMQ-2f363d?style=flat-square"> <img alt="Vitest" src="https://img.shields.io/badge/Vitest-2f363d?style=flat-square&logo=vitest&logoColor=white"> |
+| **Web & mobile** | <img alt="React" src="https://img.shields.io/badge/React-2f363d?style=flat-square&logo=react&logoColor=white"> <img alt="React Native" src="https://img.shields.io/badge/React_Native-2f363d?style=flat-square&logo=react&logoColor=white"> <img alt="Expo" src="https://img.shields.io/badge/Expo-2f363d?style=flat-square&logo=expo&logoColor=white"> <img alt="Vite" src="https://img.shields.io/badge/Vite-2f363d?style=flat-square&logo=vite&logoColor=white"> <img alt="TanStack Query" src="https://img.shields.io/badge/TanStack_Query-2f363d?style=flat-square&logo=reactquery&logoColor=white"> <img alt="Tailwind CSS" src="https://img.shields.io/badge/Tailwind-2f363d?style=flat-square&logo=tailwindcss&logoColor=white"> <img alt="zustand" src="https://img.shields.io/badge/zustand-2f363d?style=flat-square"> <img alt="Recharts" src="https://img.shields.io/badge/Recharts-2f363d?style=flat-square"> |
+| **Data** | <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-2f363d?style=flat-square&logo=postgresql&logoColor=white"> <img alt="Neon" src="https://img.shields.io/badge/Neon-2f363d?style=flat-square&logo=neon&logoColor=white"> <img alt="Redis" src="https://img.shields.io/badge/Redis-2f363d?style=flat-square&logo=redis&logoColor=white"> |
+| **Ops & delivery** | <img alt="Docker" src="https://img.shields.io/badge/Docker-2f363d?style=flat-square&logo=docker&logoColor=white"> <img alt="GitHub Actions" src="https://img.shields.io/badge/GitHub_Actions-2f363d?style=flat-square&logo=githubactions&logoColor=white"> <img alt="EAS Build" src="https://img.shields.io/badge/EAS_Build-2f363d?style=flat-square&logo=expo&logoColor=white"> <img alt="PM2" src="https://img.shields.io/badge/PM2-2f363d?style=flat-square&logo=pm2&logoColor=white"> <img alt="nginx" src="https://img.shields.io/badge/nginx-2f363d?style=flat-square&logo=nginx&logoColor=white"> <img alt="DigitalOcean" src="https://img.shields.io/badge/DigitalOcean-2f363d?style=flat-square&logo=digitalocean&logoColor=white"> <img alt="Vercel" src="https://img.shields.io/badge/Vercel-2f363d?style=flat-square&logo=vercel&logoColor=white"> <img alt="Cloudflare" src="https://img.shields.io/badge/Cloudflare-2f363d?style=flat-square&logo=cloudflare&logoColor=white"> |
 
-**Languages**
-<br/>
-<img src="https://skillicons.dev/icons?i=ts,js,python,java,c,php,html,css&theme=dark" />
+---
 
-<br/><br/>
+<details>
+<summary>🇲🇳 Монголоор</summary>
 
-**Frameworks & Libraries**
-<br/>
-<img src="https://skillicons.dev/icons?i=react,nextjs,angular,nodejs,express,tailwind&theme=dark" />
+### TEMS
 
-<br/><br/>
+Найман салбартай хувийн сургалтын байгууллагын элсэлтийн бүх урсгалыг — зарын
+даралтаас гэрээ байгуулах хүртэл — хөтөлдөг CRM. Борлуулалт, хүний нөөц, санхүү,
+салбарын багууд өдөр бүр ашигладаг.
 
-**Data · AI · Tools**
-<br/>
-<img src="https://skillicons.dev/icons?i=mysql,postgres,opencv,tensorflow,git,github,docker,figma&theme=dark" />
+**Асуудал.** Хүсэлтүүд Meta Lead Ads, Google Forms, биечлэн ирсэн, арга хэмжээ, Google
+Sheets гэсэн хоорондоо холбоогүй таван сувгаар ирдэг байв. «Өнгөрсөн сарын зарын
+хүсэлтүүдээс хэд нь үнэхээр элссэн бэ, аль салбарт?» гэдэгт хэн ч хариулж чадахгүй,
+давхардсан эцэг эх хоёр удаа тоологдож, гэрээ болон төлбөрийг гараар хөтөлж байлаа.
 
-</div>
+1. **LLM-ийг зөвхөн үнэ цэнээ өгөх газарт нь.** Монгол нэрс кирилл, латин галигаар
+   холилдон ирдэг. Тодорхой тохиолдлыг детерминист тааруулагч (галиг хялбарчлал +
+   токен эрэмбэ + триграм ижилслэл) үнэгүй шийдэж, зөвхөн эргэлзээтэй дунд хэсгийг
+   Gemini-д илгээдэг; итгэлцлийн босго давсан үед л хариуг хүлээн авч, бусад үед хүн
+   шийддэг. Ах дүүс хоорондоо нэгтгэгдэхээс бүтцийн түвшинд хамгаалагдсан.
+2. **Алдаа гарвал зогсдог нэгтгэлийн хөдөлгүүр.** Шинэ хүснэгт lead-рүү холбогдсон
+   мөртлөө бүртгэлтэй FK багцад нь ороогүй бол ажиллахаас татгалздаг — ирээдүйн
+   миграци өгөгдлийг чимээгүй орхигдуулж чадахгүй.
+3. **Хэрэглэгчдийг байгаа газарт нь угтах.** Борлуулалтын багийг хүснэгтээс нь
+   салгахын оронд BullMQ worker Google Sheets-ийг бүрэн синктэй гадаргуу болгосон:
+   idempotent импорт (контент-хэшлэсэн түлхүүр — давтан ажиллуулахад өөрчлөлт гарахгүй)
+   ба CRM төлөвийг хүснэгт рүү буцааж бичдэг.
 
-<br/>
+### ANYTIME
 
-<!-- ═══════════════════════════════════════════════════════════ -->
+Улаанбаатар дахь ANYTIME 24/7 фитнесийн гишүүнчлэлийн платформ: мобайл апп, REST API,
+менежерийн самбар. Сарын ~5 ам.долларын дэд бүтэц дээр ажиллаж байна.
 
-## ✍️ &nbsp;Latest Writing
+**Асуудал.** 24/7 фитнес өдрийн ихэнх цагт үүдэндээ ажилтангүй. Гишүүнчлэлийн бүртгэл
+өөрөө үйлчилгээтэй, найдвартай, гэрээсээ хуурамчаар хийх боломжгүй байх ёстой.
 
-Би [TEE Education](https://tee.education/mn/articles) дээр технологийн сэдвээр нийтлэл бичдэг:
+1. **Хуурамч байршлын эсрэг давхарласан хамгаалалт.** Клиент `coords.mocked`-г шалгаж
+   mock-location аппыг барьдаг; сервер клиентэд итгэхийн оронд Haversine зайг өөрөө
+   дахин тооцдог. 100 м-ээс муу нарийвчлалтай хэмжилтийг шууд хааж, geofence-ийн
+   зөвшөөрөл нарийвчлалтай уялдан (нарийвчлал / 2, дээд тал нь 25 м) өөрчлөгддөг.
+2. **Утас халаасанд байхад ч тасрахгүй сесс.** `expo-task-manager` + Android
+   foreground-service мэдэгдлээр дасгалын сесс арын горимд үргэлжилдэг. GPS авалт
+   10 секундын `Promise.race`-д ороосон тул UI гацахын оронд "timeout" төлөвт ил
+   шилждэг.
+3. **Нэг backend, гурван өөр клиент.** NestJS + Prisma API нь React Native апп,
+   Vite/React самбар, CI гурвыг зэрэг үйлчилдэг; JWT auth (bcrypt cost 12, auth зам
+   дээр минутад 5 хүсэлт), Prisma схем нь гурвуулангийн цорын ганц үнэний эх сурвалж.
 
-| Нийтлэл | Ангилал | ⏱️ |
-|---|---|---|
-| [Португал–Хорватын маргаантай offside: Хиймэл оюун ухаан ДАШТ-ийг хэрхэн өөрчилж байна вэ?](https://tee.education/mn/articles/cmpj9sb4u02hg57abwdcmfi59) | Хиймэл Оюун ба Өгөгдлийн ШУ | 4 мин |
-| [Веб сайт гэж юу вэ? — Дугаар 3](https://tee.education/mn/articles/cmo7632wf00xy57byqtlfvg0g) | Програмчлал ба Код | 5 мин |
-| [Веб сайт гэж юу вэ? — Дугаар 2](https://tee.education/mn/articles/cmo762w7d00vq57byvpl45m6y) | Програмчлал ба Код | 3 мин |
-| [Нэг мөрийн төгсгөлд нуугдсан дүрэм: Semicolon](https://tee.education/mn/articles/cmo762gnq00ra57by51zb338z) | Програмчлал ба Код | 1 мин |
-| [Яагаад манай сургуулийн лого резинэн нугас вэ?](https://tee.education/mn/articles/cmo762aya00p257byesqha6zo) | Боловсрол, Зөвлөгөө | 3 мин |
+</details>
 
-<div align="right">
-<a href="https://tee.education/mn/articles?author=%D0%9C.%D0%97%D0%BE%D1%80%D0%B8%D0%B3%D1%82"><b>Бүгдийг үзэх →</b></a>
-</div>
-
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-## 📊 &nbsp;GitHub Analytics
-
-<div align="center">
-
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=mz310&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=8E2DE2&icon_color=00C9FF&text_color=c9d1d9&bg_color=0d1117" />
-<img width="42%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mz310&layout=compact&langs_count=8&hide_border=true&title_color=8E2DE2&text_color=c9d1d9&bg_color=0d1117" />
-
-<br/>
-
-<img width="92%" src="https://streak-stats.demolab.com?user=mz310&hide_border=true&background=0d1117&stroke=8E2DE2&ring=00C9FF&fire=8E2DE2&currStreakLabel=00C9FF&sideLabels=c9d1d9&dates=8b949e&sideNums=c9d1d9&currStreakNum=ffffff" />
-
-<br/><br/>
-
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=mz310&bg_color=0d1117&color=c9d1d9&line=8E2DE2&point=00C9FF&area=true&area_color=4A00E0&hide_border=true&custom_title=Commits%20over%20time" />
-
-<br/><br/>
-
-<img src="https://github-profile-trophy.vercel.app/?username=mz310&theme=onestar&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8" />
-
-</div>
-
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-## 🐍 &nbsp;Contribution Snake
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mz310/mz310/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mz310/mz310/output/github-snake.svg" />
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/mz310/mz310/output/github-snake.svg" />
-</picture>
-
-</div>
-
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-## 📌 &nbsp;Featured Projects
+---
 
 <div align="center">
 
-<a href="https://github.com/mz310/anytime">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=mz310&repo=anytime&hide_border=true&title_color=8E2DE2&icon_color=00C9FF&text_color=c9d1d9&bg_color=0d1117" />
-</a>
-<a href="https://github.com/mz310/nuuts-nfc-web">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=mz310&repo=nuuts-nfc-web&hide_border=true&title_color=8E2DE2&icon_color=00C9FF&text_color=c9d1d9&bg_color=0d1117" />
-</a>
-
-</div>
-
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-## 🎌 &nbsp;Off the Keyboard
-
-<div align="center">
-
-<table>
-<tr>
-<td align="center" width="25%">
-  <img src="https://img.icons8.com/fluency/64/naruto.png" width="48" /><br/>
-  <b>Anime</b><br/>
-  <sub>Сэтгэл зүйн, гүн гүнзгий<br/>өгүүлэмжтэй нь</sub>
-</td>
-<td align="center" width="25%">
-  <img src="https://img.icons8.com/fluency/64/clapperboard.png" width="48" /><br/>
-  <b>Cinema</b><br/>
-  <sub>Sci-fi, Nolan,<br/>Villeneuve</sub>
-</td>
-<td align="center" width="25%">
-  <img src="https://img.icons8.com/fluency/64/basketball.png" width="48" /><br/>
-  <b>Basketball</b><br/>
-  <sub>Талбай дээр ч,<br/>highlight үзэх ч</sub>
-</td>
-<td align="center" width="25%">
-  <img src="https://img.icons8.com/fluency/64/violin.png" width="48" /><br/>
-  <b>Classical</b><br/>
-  <sub>Bach · Chopin<br/>Rachmaninoff</sub>
-</td>
-</tr>
-</table>
-
-<br/>
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Random Dev Quote" />
-
-</div>
-
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-## 🤝 &nbsp;Connect
-
-<div align="center">
-
-<a href="https://tee.education/mn/teachers/cmo0k4aro001257pmypb66fi7">
-  <img src="https://img.shields.io/badge/TEE_Education-8E2DE2?style=for-the-badge&logoColor=white" />
-</a>
-<a href="mailto:mzorigt6@gmail.com">
-  <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
-</a>
-<a href="https://linkedin.com/in/YOUR_HANDLE">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-</a>
-<a href="https://t.me/YOUR_HANDLE">
-  <img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" />
-</a>
-
-</div>
-
-<br/>
-
-<div align="center">
-
-> *"Хэрэв чи үүнийг энгийнээр тайлбарлаж чадахгүй бол,*
-> *чи өөрөө сайн ойлгоогүй байна гэсэн үг."* — Richard Feynman
-
-<br/>
-
-⭐️ **Зочилсонд баярлалаа!** — [mz310](https://github.com/mz310) 🇲🇳
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9FF,50:4A00E0,100:8E2DE2&height=140&section=footer" width="100%" />
+<sub>Open to full-stack roles and contract work · <a href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a> · <a href="mailto:YOU@EXAMPLE.COM">email</a> · Ulaanbaatar, UTC+8</sub>
 
 </div>
