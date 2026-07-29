@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" role="img" aria-label="M. Zorigt — production systems, end to end, solo">
+<rect width="1200" height="240" fill="#0d1117"></rect><rect x="0.5" y="0.5" width="1199" height="239" fill="none" stroke="#e6edf3"></rect>
+<text x="40" y="50" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,&#39;Liberation Mono&#39;,monospace" font-size="14" letter-spacing="2" fill="#e6edf3">MZ310 / GITHUB.COM/MZ310</text>
+<text x="1160" y="50" text-anchor="end" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,&#39;Liberation Mono&#39;,monospace" font-size="14" letter-spacing="2" fill="#e6edf3">ULAANBAATAR, MONGOLIA · UTC+8</text>
+<line x1="40" y1="66" x2="1160" y2="66" stroke="#e6edf3"></line>
+<text x="36" y="156" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,&#39;Liberation Mono&#39;,monospace" font-weight="800" font-size="78" letter-spacing="1" fill="#e6edf3">M.ZORIGT</text>
+<text x="40" y="200" font-family="ui-monospace,&#39;SF Mono&#39;,Menlo,Consolas,&#39;Liberation Mono&#39;,monospace" font-size="19" fill="#e6edf3">I design, build, deploy and operate production systems — end to end, solo.</text>
+</svg>
