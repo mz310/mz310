@@ -1,12 +1,18 @@
 <div align="center">
 
-![M. Zorigt — production systems, end to end, solo](assets/header.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <img alt="M. Zorigt — production systems, end to end, solo" src="assets/header.svg">
+</picture>
 
 <a href="https://crm.tee.education"><img alt="TEMS — live" src="https://img.shields.io/badge/LIVE-crm.tee.education-ffffff?style=flat-square&labelColor=000000"></a>&nbsp;<a href="https://github.com/mz310/anytime"><img alt="ANYTIME — live" src="https://img.shields.io/badge/LIVE-mz310%2Fanytime-ffffff?style=flat-square&labelColor=000000"></a>&nbsp;<a href="https://www.linkedin.com/in/YOUR-HANDLE"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-ffffff?style=flat-square&logo=linkedin&logoColor=000000"></a>&nbsp;<a href="mailto:YOU@EXAMPLE.COM"><img alt="Email" src="https://img.shields.io/badge/EMAIL-ffffff?style=flat-square"></a>
 
 </div>
 
-![01 — whoami](assets/s01.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/s01-dark.svg">
+  <img alt="01 — whoami" src="assets/s01.svg">
+</picture>
 
 Two systems below are in production today: a CRM running the full enrollment pipeline of
 an eight-branch education group, and a geofence-verified membership platform for a 24/7
@@ -14,7 +20,10 @@ gym. Both built alone, end to end — schema, API, background jobs, frontend, de
 pipeline. Currently operating and extending both; open to full-stack roles and contract
 work.
 
-![02 — TEMS, production CRM](assets/s02.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/s02-dark.svg">
+  <img alt="02 — TEMS, production CRM" src="assets/s02.svg">
+</picture>
 
 <a href="https://crm.tee.education"><img alt="Live at crm.tee.education" src="https://img.shields.io/badge/LIVE-crm.tee.education-ffffff?style=flat-square&labelColor=000000"></a> <img alt="Private repository" src="https://img.shields.io/badge/REPO-PRIVATE-ffffff?style=flat-square&labelColor=000000"> <img alt="Built solo" src="https://img.shields.io/badge/BUILT-SOLO-ffffff?style=flat-square&labelColor=000000">
 
@@ -41,7 +50,10 @@ spreadsheets, a BullMQ worker makes the sheet a first-class synced surface: idem
 import (content-hashed keys, so re-runs are no-ops) plus writeback of CRM state into
 the sheet. The adoption problem was solved by architecture.
 
-![71 SQL migrations · 8 background workers · 28 services · 67 test files · 44 ops scripts · 8 RBAC roles](assets/tems-telemetry.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tems-telemetry-dark.svg">
+  <img alt="71 SQL migrations · 8 background workers · 28 services · 67 test files · 44 ops scripts · 8 RBAC roles" src="assets/tems-telemetry.svg">
+</picture>
 
 <sub>Migrations apply automatically on every deploy. All 44 operational scripts are
 preview-by-default — nothing writes to production without an explicit `--apply` flag.</sub>
@@ -83,7 +95,10 @@ flowchart LR
 
 </details>
 
-![03 — ANYTIME, geofenced fitness](assets/s03.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/s03-dark.svg">
+  <img alt="03 — ANYTIME, geofenced fitness" src="assets/s03.svg">
+</picture>
 
 <a href="https://api.zorigt.live"><img alt="API live" src="https://img.shields.io/badge/API-api.zorigt.live-ffffff?style=flat-square&labelColor=000000"></a> <a href="https://dashboard.zorigt.live"><img alt="Dashboard live" src="https://img.shields.io/badge/DASHBOARD-dashboard.zorigt.live-ffffff?style=flat-square&labelColor=000000"></a> <a href="https://github.com/mz310/anytime"><img alt="Repository" src="https://img.shields.io/badge/REPO-mz310%2Fanytime-ffffff?style=flat-square&labelColor=000000"></a>
 
@@ -109,7 +124,10 @@ Native app, a Vite/React manager dashboard, and CI — JWT auth (bcrypt cost 12,
 rate-limited to 5 requests/min on auth routes), with the Prisma schema as the single
 source of truth across all three.
 
-![15 Prisma models · 17 migrations · 13 backend modules · 17 test suites · about five dollars per month of infrastructure](assets/anytime-telemetry.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/anytime-telemetry-dark.svg">
+  <img alt="15 Prisma models · 17 migrations · 13 backend modules · 17 test suites · about five dollars per month of infrastructure" src="assets/anytime-telemetry.svg">
+</picture>
 
 <sub>CI on backend and mobile · Android APK distributed through EAS Build.</sub>
 
@@ -139,15 +157,27 @@ sequenceDiagram
 
 </details>
 
-![04 — stack](assets/s04.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/s04-dark.svg">
+  <img alt="04 — stack" src="assets/s04.svg">
+</picture>
 
-![Backend: TypeScript, Node.js, NestJS, Express, Prisma, Zod, BullMQ, Vitest. Web and mobile: React 19, React Native, Expo, Vite, TanStack Query, Tailwind 4, zustand, Recharts. Data: PostgreSQL, Neon, Redis. Ops: Docker, GitHub Actions, EAS Build, PM2, nginx, DigitalOcean, Vercel, Cloudflare.](assets/stack.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
+  <img alt="Backend: TypeScript, Node.js, NestJS, Express, Prisma, Zod, BullMQ, Vitest. Web and mobile: React 19, React Native, Expo, Vite, TanStack Query, Tailwind 4, zustand, Recharts. Data: PostgreSQL, Neon, Redis. Ops: Docker, GitHub Actions, EAS Build, PM2, nginx, DigitalOcean, Vercel, Cloudflare." src="assets/stack.svg">
+</picture>
 
-![05 — contact](assets/s05.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/s05-dark.svg">
+  <img alt="05 — contact" src="assets/s05.svg">
+</picture>
 
 <div align="center">
 
-![Open to full-stack roles and contract work](assets/footer.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg">
+  <img alt="Open to full-stack roles and contract work" src="assets/footer.svg">
+</picture>
 
 <a href="https://www.linkedin.com/in/YOUR-HANDLE"><img alt="LinkedIn" src="https://img.shields.io/badge/LINKEDIN-ffffff?style=flat-square&logo=linkedin&logoColor=000000"></a>&nbsp;<a href="mailto:YOU@EXAMPLE.COM"><img alt="Email" src="https://img.shields.io/badge/EMAIL-ffffff?style=flat-square"></a>&nbsp;<a href="https://github.com/mz310"><img alt="GitHub" src="https://img.shields.io/badge/GITHUB-mz310-ffffff?style=flat-square&labelColor=000000"></a>
 
